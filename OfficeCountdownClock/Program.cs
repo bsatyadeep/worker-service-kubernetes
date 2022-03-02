@@ -20,7 +20,9 @@ namespace OfficeCountdownClock
 
                     // Health check services. A custom health check service is added for demo.
                     services.AddHealthChecks().AddCheck<CustomHealthCheck>("custom_hc");
-                    services.AddHostedService<TcpHealthProbeService>();
+                    //services.AddHostedService<TcpHealthProbeService>();
+
+                    services.AddHostedService<HttpHealthProbeService>();
                 });
         }
     }
